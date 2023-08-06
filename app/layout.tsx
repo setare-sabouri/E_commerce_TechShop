@@ -20,7 +20,7 @@ export default function RootLayout({
         <nav>
           <h1>general nav</h1>
         </nav>
-        {children}
+        <main> {children}</main>
       </body>
     </html>
   );
