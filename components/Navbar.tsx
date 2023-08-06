@@ -29,17 +29,19 @@ const Navbar = () => {
         />
         <button>🔍</button>
       </form>
-      <Link href="/">
-        <Badge badgeContent={4} color="primary">
-          <ShoppingCartOutlined />
-        </Badge>
-      </Link>
-      <h2>
-        <Link href="/">Sign in</Link>
-      </h2>
-      <h2>
+      <div>
+        <Link href="/">
+          <Badge badgeContent={4} color="primary">
+            <ShoppingCartOutlined />
+          </Badge>
+        </Link>
+
+        <Link href="/">
+          <h2>Sign in</h2>
+        </Link>
+
         <Link href="/">EN</Link>
-      </h2>
+      </div>
     </nav>
   );
 };
