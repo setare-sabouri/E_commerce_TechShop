@@ -1,6 +1,6 @@
-import styles from "./page.module.css";
-import Link from "next/link";
-import Slider from "@/components/Slider";
+import styles from './page.module.css';
+import Link from 'next/link';
+import Slider from '@/components/Slider';
 export default function Home() {
   return (
     <main className={styles.main}>
