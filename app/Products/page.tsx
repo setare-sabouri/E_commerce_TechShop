@@ -10,9 +10,13 @@ export const metadata: Metadata = {
 export const Products = () => {
   return (
     <>
-      {data.products.map((product) => {
-        return <ProductItem product={product} key={product.slug}></ProductItem>;
-      })}
+      <section className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4 px-4 justify-items-center">
+        {data.products.map((product) => {
+          return (
+            <ProductItem product={product} key={product.slug}></ProductItem>
+          );
+        })}
+      </section>
     </>
   );
 };
