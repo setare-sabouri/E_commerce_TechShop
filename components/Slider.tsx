@@ -12,7 +12,7 @@ const Slider = () => {
   return (
     <div className="w-screen h-screen">
       <Swiper
-        className="md:w-70 xs:w-60 lg:w-70 h-screen"
+        className="md:w-70 xs:w-60 lg:w-70 h-screen  flex items-center justify-center"
         modules={[Navigation, Scrollbar, A11y]}
         spaceBetween={50}
         slidesPerView={1}

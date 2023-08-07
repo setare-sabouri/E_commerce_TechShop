@@ -24,7 +24,7 @@ export default function RootLayout({
         </header>
         <main>{children}</main>
         <footer className="flex justify-center items-center shadow-inner border-t p-2 ">
-          footer{' '}
+          footer
         </footer>
       </body>
     </html>
