@@ -8,6 +8,7 @@ const ProductItem = ({ product }) => {
       <p className='text-xl'>{product.name}</p>
       <p>Proce: {product.price}$</p>
       <p className='text-sm'>Brand: {product.brand}</p>
+      <button className='primary-button'>Add</button>
     </div >
   )
 
