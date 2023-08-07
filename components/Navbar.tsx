@@ -14,7 +14,7 @@ const Navbar = () => {
     router.push(`/${search}/`);
   };
   return (
-    <nav className="bg-white p-2 flex justify-between items-center drop-shadow-xl">
+    <nav className="bg-white p-2 flex justify-between items-center border-b">
       <h1 className="text-2xl font-bold">
         <Link href="/">ICON</Link>
       </h1>
