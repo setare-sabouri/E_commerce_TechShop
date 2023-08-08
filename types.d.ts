@@ -28,3 +28,16 @@ type User = {
         "bs": string
     }
 }
+type Product = {
+    name: string;
+    slug: string;
+    image: string; 
+    price: number; 
+    brand: string;
+    category: string;
+    rating: number; 
+    numReviews: number;
+    stockStatus: string;
+    description: string;
+  };
+  

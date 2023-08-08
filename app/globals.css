@@ -10,9 +10,9 @@
 }
 
 .card {
-    @apply rounded-lg border border-l-gray-400 p-2 shadow-md;
+    @apply rounded-lg border border-l-gray-400 shadow-md;
 }
 
 .primary-button {
-    @apply rounded py-2 px-4 shadow outline-none bg-amber-300 hover:bg-amber-500 active:bg-amber-700;
+    @apply w-1/2 rounded py-2 px-4 shadow outline-none bg-amber-300 hover:bg-amber-500 active:bg-amber-700;
 }

@@ -1,8 +1,8 @@
-import getUser from "@/lib/getUser";
-import getUserPosts from "@/lib/getUserPosts";
-import { Suspense } from "react";
-import UserPosts from "./components/userPosts";
-import type { Metadata } from "next";
+import getUser from '@/lib/getUser';
+import getUserPosts from '@/lib/getUserPosts';
+import { Suspense } from 'react';
+import UserPosts from './components/userPosts';
+import type { Metadata } from 'next';
 
 type Params = {
   params: {
