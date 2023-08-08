@@ -16,3 +16,25 @@
 .primary-button {
     @apply w-1/2 rounded py-2 px-4 shadow outline-none bg-amber-300 hover:bg-amber-500 active:bg-amber-700;
 }
+
+/* styles.module.css */
+.badge-container {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    top: 9%;
+    right: 16%;
+    /* transform: translate(50%, -50%); */
+}

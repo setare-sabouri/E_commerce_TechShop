@@ -2,8 +2,8 @@
 import Link from 'next/link';
 import { useState, FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
-// import { Search, ShoppingCartOutlined } from '@material-ui/icons';
-// import { Badge } from '@material-ui/core';
+import Badge from '@mui/material/Badge';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 const Navbar = () => {
   const [search, setSeach] = useState('');
@@ -13,6 +13,9 @@ const Navbar = () => {
     setSeach('');
     router.push(`/${search}/`);
   };
+
+  const [cartItemsCount, setCartItemsCount] = useState(1);
+
   return (
     <nav className="bg-white p-2 flex justify-between items-center border-b">
       <h1 className="text-2xl font-bold">
@@ -29,12 +32,15 @@ const Navbar = () => {
         />
         <button>🔍</button>
       </form>
+
       <div className="flex flex-row justify-between gap-4">
-        <Link href="/">
-          {/* <Badge badgeContent={4} color="primary">
-            <ShoppingCartOutlined />
-          </Badge> */}
-          <p>badge</p>
+        <Link href="/" className="p-2">
+          <ShoppingCartOutlinedIcon />
+          {cartItemsCount > 0 && (
+            <span className="ml-1 rounded-full bg-red-600 px-2 py-1 text-xs font-bold text-white">
+              {cartItemsCount}
+            </span>
+          )}
         </Link>
 
         <Link href="/">
