@@ -2,8 +2,8 @@
 import Link from 'next/link';
 import { useState, FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
-import { Search, ShoppingCartOutlined } from '@material-ui/icons';
-import { Badge } from '@material-ui/core';
+// import { Search, ShoppingCartOutlined } from '@material-ui/icons';
+// import { Badge } from '@material-ui/core';
 
 const Navbar = () => {
   const [search, setSeach] = useState('');
@@ -31,9 +31,10 @@ const Navbar = () => {
       </form>
       <div className="flex flex-row justify-between gap-4">
         <Link href="/">
-          <Badge badgeContent={4} color="primary">
+          {/* <Badge badgeContent={4} color="primary">
             <ShoppingCartOutlined />
-          </Badge>
+          </Badge> */}
+          <p>badge</p>
         </Link>
 
         <Link href="/">

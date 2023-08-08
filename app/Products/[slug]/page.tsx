@@ -1,15 +1,16 @@
+// [slug]/page.tsx
 'use client';
 
-import { useSearchParams } from 'next/navigation';
-
-import React from 'react';
+import { useRouter } from 'next/navigation';
+import { useParams } from 'next/navigation';
 
 const ProductDetails = () => {
-  const searchParams = useSearchParams();
+  const router = useRouter();
+  const { slug } = useParams();
 
-  const slug = searchParams.get('slug');
-  console.log(slug);
-  return <div>aa{slug} ff</div>;
+  console.log(router);
+
+  return <div>Product details page{slug}</div>;
 };
 
 export default ProductDetails;
