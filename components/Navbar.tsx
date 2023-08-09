@@ -14,7 +14,7 @@ const Navbar = () => {
     router.push(`/${search}/`);
   };
 
-  const [cartItemsCount, setCartItemsCount] = useState(1);
+  const [cartItemsCount, setCartItemsCount] = useState(0);
 
   return (
     <nav className="bg-white p-2 flex justify-between items-center border-b">

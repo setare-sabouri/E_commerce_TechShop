@@ -12,7 +12,6 @@ const ProductItem = ({ product }: { product: Product }) => {
       <div className="flex flex-col gap-3 items-center">
         <p className="text-xl">{product.name}</p>
         <p className="text-sm"> {product.brand}</p>
-        <button className="primary-button">Add</button>
       </div>
     </div>
   );

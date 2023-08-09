@@ -2,6 +2,8 @@ import './globals.css';
 import Navbar from '../components/Navbar';
 import Announcement from '@/components/Announcement';
 import { Inter } from 'next/font/google';
+import StoreProvider from '../utils/Store'; // Adjust the path as needed
+
 const inter = Inter({ subsets: ['latin'] });
 
 import type { Metadata } from 'next';
@@ -18,14 +20,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="flex justify-between min-h-screen flex-col">
-        <header>
-          <Announcement />
-          <Navbar />
-        </header>
-        <main>{children}</main>
-        <footer className="flex justify-center items-center shadow-inner border-t p-2 ">
-          footer
-        </footer>
+        <StoreProvider>
+          <header>
+            <Announcement />
+            <Navbar />
+          </header>
+          <main>{children}</main>
+          <footer className="flex justify-center items-center shadow-inner border-t p-2 ">
+            footer
+          </footer>
+        </StoreProvider>
       </body>
     </html>
   );
