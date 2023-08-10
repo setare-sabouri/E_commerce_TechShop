@@ -13,15 +13,22 @@ const ProductDetails = () => {
 
   //consumin founded
   const { state, dispatch } = useContext(Store);
+
   const addToCartHandler = () => {
-    console.log(state.cart.cartItems);
-    const existingItem = state.cart.cartItems.find(
-      (item) => item.slug === product.slug
+    const existItem = state.cart.cartItems.find(
+      (item: Product) => item.slug === product.slug
     );
-    existingItem
-      ? console.log('founded')
-      : dispatch({ type: 'ADD_TO_CART', payload: product });
+    const quantity = existItem ? existItem.quantity + 1 : 1;
+    console.log(quantity);
+
+    if (product.countInStock < quantity) {
+      alert('Sorry. Product is out of stock');
+      return;
+    }
+
+    dispatch({ type: 'ADD_TO_CART', payload: { ...product, quantity } });
   };
+
   return (
     <>
       <section className="grid grid-cols-3 justify-items-center">
@@ -43,11 +50,10 @@ const ProductDetails = () => {
           <p>{product.price}</p>
           <p>{product.numReviews}</p>
           <p>{product.rating}</p>
-          <p>{product.stockStatus}</p>
+          <p>{product.countInStock}</p>
         </div>
         <div>
           <button className="card" onClick={addToCartHandler}>
-            {' '}
             Add to card
           </button>
         </div>

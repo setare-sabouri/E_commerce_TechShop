@@ -8,7 +8,7 @@
 //       brand: 'Asus',
 //       category: 'Computer and Laptops',
 //       rating: 4',//       numReviews: 5,
-//       stockStatus: 'Check Availability',
+//       countInStock:5 lability',
 //       description: 'Asus display 2023',
 //     },
 //     {
@@ -20,7 +20,7 @@
 //       category: 'Computer and Laptops',
 //       rating: '4.5',
 //       numReviews: 10,
-//       stockStatus: 'In Stock',
+//       countInStock:5
 //       description: 'SuperBook Pro 15-inch laptop',
 //     },
 //     {
@@ -32,7 +32,7 @@
 //       category: 'Computer and Laptops',
 //       rating: '4.7',
 //       numReviews: 15,
-//       stockStatus: 'In Stock',
+//       countInStock:5
 //       description: 'Lenovo Flex 5 2-in-1 laptop',
 //     },
 //     {
@@ -44,7 +44,7 @@
 //       category: 'Computer and Laptops',
 //       rating: '4.8',
 //       numReviews: 20,
-//       stockStatus: 'Check Availability',
+//       countInStock:5 lability',
 //       description: 'Powerful gaming laptop by MSI',
 //     },
 //     {
@@ -56,7 +56,7 @@
 //       category: 'Computer and Laptops',
 //       rating: '4.9',
 //       numReviews: 25,
-//       stockStatus: 'In Stock',
+//       countInStock:5
 //       description: 'Razer Blade 15 gaming laptop',
 //     },
 //     {
@@ -68,7 +68,7 @@
 //       category: 'Storage and Memory',
 //       rating: '4.5',
 //       numReviews: 8,
-//       stockStatus: 'In Stock',
+//       countInStock:5
 //       description: 'Corsair Vengeance LPX DDR4 RAM',
 //     },
 //     {
@@ -80,7 +80,7 @@
 //       category: 'Storage and Memory',
 //       rating: '4.7',
 //       numReviews: 12,
-//       stockStatus: 'In Stock',
+//       countInStock:5
 //       description: 'Samsung 1TB Solid State Drive',
 //     },
 //     {
@@ -92,7 +92,7 @@
 //       category: 'Storage and Memory',
 //       rating: '4.6',
 //       numReviews: 11,
-//       stockStatus: 'Check Availability',
+//       countInStock:5 lability',
 //       description: 'WD Elements 2TB External Hard Drive',
 //     },
 //   ],
@@ -111,7 +111,7 @@ const data = {
       category: 'Computer and Laptops',
       rating: 4,
       numReviews: 5,
-      stockStatus: 'Check Availability',
+      countInStock: 5,
       description: 'Asus display 2023',
     },
     {
@@ -123,7 +123,7 @@ const data = {
       category: 'Computer and Laptops',
       rating: 4.5,
       numReviews: 10,
-      stockStatus: 'In Stock',
+      countInStock: 5,
       description: 'SuperBook Pro 15-inch laptop',
     },
     {
@@ -135,7 +135,7 @@ const data = {
       category: 'Computer and Laptops',
       rating: 4.7,
       numReviews: 15,
-      stockStatus: 'In Stock',
+      countInStock: 5,
       description: 'Lenovo Flex 5 2-in-1 laptop',
     },
     {
@@ -147,7 +147,7 @@ const data = {
       category: 'Computer and Laptops',
       rating: 4.8,
       numReviews: 20,
-      stockStatus: 'Check Availability',
+      countInStock: 5,
       description: 'Powerful gaming laptop by MSI',
     },
     {
@@ -159,7 +159,7 @@ const data = {
       category: 'Computer and Laptops',
       rating: 4.9,
       numReviews: 25,
-      stockStatus: 'In Stock',
+      countInStock: 5,
       description: 'Razer Blade 15 gaming laptop',
     },
     {
@@ -171,7 +171,7 @@ const data = {
       category: 'Storage and Memory',
       rating: 4.5,
       numReviews: 8,
-      stockStatus: 'In Stock',
+      countInStock: 5,
       description: 'Corsair Vengeance LPX DDR4 RAM',
     },
     {
@@ -183,7 +183,7 @@ const data = {
       category: 'Storage and Memory',
       rating: 4.7,
       numReviews: 12,
-      stockStatus: 'In Stock',
+      countInStock: 5,
       description: 'Samsung 1TB Solid State Drive',
     },
     {
@@ -195,7 +195,7 @@ const data = {
       category: 'Storage and Memory',
       rating: 4.6,
       numReviews: 11,
-      stockStatus: 'Check Availability',
+      countInStock: 5,
       description: 'WD Elements 2TB External Hard Drive',
     },
   ],

@@ -18,13 +18,15 @@ const reducer = (state, action) => {
     case ADD_TO_CART: {
       console.log('here');
       const newItem = action.payload;
-      //   updatedCartItems = state.cart.cartItems.map((item) => {
-      //     item.slug === newItem.slug ? newItem : item;
-      //   });
-      //   if (!updatedCartItems.includes(newItem)) {
-      //     updatedCartItems.push(newItem);
-      //   }
-      //   return { ...state, cart: { ...state.cart, cartItems: updatedCartItems } };
+      const updatedCartItems = state.cart.cartItems.map((item) => {
+        item.slug === newItem.slug ? newItem : item;
+      });
+      if (!updatedCartItems.includes(newItem)) {
+        updatedCartItems.push(newItem);
+      }
+
+      //returning new state
+      return { ...state, cart: { ...state.cart, cartItems: updatedCartItems } };
     }
 
     default:
@@ -34,12 +36,7 @@ const reducer = (state, action) => {
 
 const StoreProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, StateInit);
-  const contextValue = useMemo(() => {
-    return {
-      state,
-      dispatch,
-    };
-  });
+  const contextValue = { state, dispatch };
 
   return <Store.Provider value={contextValue}>{children}</Store.Provider>;
 };

@@ -2,7 +2,8 @@
 import Link from 'next/link';
 import { useState, FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
-import Badge from '@mui/material/Badge';
+import { useContext } from 'react';
+import { Store } from '@/utils/Store';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 const Navbar = () => {
@@ -14,8 +15,8 @@ const Navbar = () => {
     router.push(`/${search}/`);
   };
 
-  const [cartItemsCount, setCartItemsCount] = useState(0);
-
+  const { state } = useContext(Store);
+  const { cart } = state;
   return (
     <nav className="bg-white p-2 flex justify-between items-center border-b">
       <h1 className="text-2xl font-bold">
@@ -36,9 +37,9 @@ const Navbar = () => {
       <div className="flex flex-row justify-between gap-4">
         <Link href="/" className="p-2">
           <ShoppingCartOutlinedIcon />
-          {cartItemsCount > 0 && (
+          {cart && cart.cartItems && cart.cartItems.length > 0 && (
             <span className="ml-1 rounded-full bg-red-600 px-2 py-1 text-xs font-bold text-white">
-              {cartItemsCount}
+              {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
             </span>
           )}
         </Link>
