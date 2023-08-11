@@ -1,5 +1,3 @@
-"use client";
-
 const Announcement = () => {
   return (
     <div className="bg-blue-500 p-4 text-center" role="alert">
