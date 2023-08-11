@@ -4,7 +4,7 @@ import { useParams } from 'next/navigation';
 import data from '@/lib/data';
 import Image from 'next/image';
 import React, { useContext } from 'react';
-import { Store } from '@/utils/Store';
+import { Store } from '../../lib/Store';
 
 const ProductDetails = () => {
   const { slug } = useParams();
@@ -16,7 +16,7 @@ const ProductDetails = () => {
 
   const addToCartHandler = () => {
     const existItem = state.cart.cartItems.find(
-      (item: Product) => item.slug === product.slug
+      (item) => item.slug === product.slug
     );
     const quantity = existItem ? existItem.quantity + 1 : 1;
     console.log(quantity);
