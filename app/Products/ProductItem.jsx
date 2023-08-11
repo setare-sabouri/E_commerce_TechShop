@@ -1,5 +1,5 @@
 import Link from 'next/link';
-const ProductItem = ({ product }: { product: Product }) => {
+const ProductItem = ({ product }) => {
   return (
     <div className="card mt-4">
       <Link href={`/Products/${product.slug}`}>
