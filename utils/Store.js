@@ -3,8 +3,11 @@ import Cookies from 'js-cookie';
 const Store = createContext();
 
 const initialState = {
-  cart: Cookies.get('cart') ? JSON.parse(Cookies.get('cart')) : { cartItems: [] }
-}
+  cart: { cartItems: [] },
+  cart: Cookies.get('cart')
+    ? JSON.parse(Cookies.get('cart'))
+    : { cartItems: [] },
+};
 
 
 function reducer(state, action) {
