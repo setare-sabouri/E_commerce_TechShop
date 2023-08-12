@@ -1,7 +1,5 @@
-'use client';
 import { createContext, useReducer } from 'react';
-
-export const Store = createContext();
+const Store = createContext();
 
 const initialState = {
   cart: { cartItems: [] },
@@ -16,8 +14,8 @@ function reducer(state, action) {
       );
       const cartItems = existItem
         ? state.cart.cartItems.map((item) =>
-            item.name === existItem.name ? newItem : item
-          )
+          item.name === existItem.name ? newItem : item
+        )
         : [...state.cart.cartItems, newItem];
       return { ...state, cart: { ...state.cart, cartItems } };
     }
@@ -31,3 +29,5 @@ export function StoreProvider({ children }) {
   const value = { state, dispatch };
   return <Store.Provider value={value}>{children}</Store.Provider>;
 }
+
+export default Store

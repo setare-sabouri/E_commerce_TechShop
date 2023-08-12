@@ -10,7 +10,9 @@ import { Navigation, Scrollbar, A11y } from 'swiper/modules';
 
 const Slider = () => {
   return (
-    <h1>Slider comes here </h1>
+    <h1 className=' className="flex min-h-screen flex-col items-center justify-between p-24"'>
+      Slider comes here
+    </h1>
     // <div className="w-screen h-screen">
     //   <Swiper
     //     className="md:w-70 xs:w-60 lg:w-70 h-screen  flex items-center justify-center"

@@ -1,5 +1,5 @@
 {
-  "name": "ecommerce",
+  "name": "next-tailwind-amazona",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,23 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^5.14.3",
-    "@types/node": "20.4.8",
-    "@types/react": "^18.2.19",
-    "@types/react-dom": "18.2.7",
-    "eslint": "8.46.0",
-    "eslint-config-next": "13.4.12",
-    "next": "^13.4.13",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "swiper": "^10.1.0",
-    "typescript": "5.1.6"
+    "next": "^12.3.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.27",
-    "tailwindcss": "^3.3.3"
+    "autoprefixer": "^10.4.5",
+    "eslint": "8.14.0",
+    "eslint-config-next": "12.1.5",
+    "postcss": "^8.4.12",
+    "tailwindcss": "^3.0.24"
   }
 }
