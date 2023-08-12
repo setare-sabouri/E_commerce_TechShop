@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Navbar from './Home/Navbar'
 import Footer from './Home/Footer';
+import Announcement from './Announcement';
 export default function Layout({ title, children }) {
 
   return (
@@ -12,6 +13,7 @@ export default function Layout({ title, children }) {
       </Head>
       <div className="flex min-h-screen flex-col justify-between ">
         <header>
+          <Announcement />
           <Navbar />
         </header>
         <main className="container m-auto mt-4 px-4">{children}</main>
