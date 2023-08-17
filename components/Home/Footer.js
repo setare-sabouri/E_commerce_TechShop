@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Footer = () => {
+    const [activeAccordion, setActiveAccordion] = useState(null);
+
+    const toggleAccordion = (index) => {
+        setActiveAccordion(activeAccordion === index ? null : index);
+    };
     return (
         <footer className="bg-gray-900 text-white">
 
@@ -23,46 +28,68 @@ const Footer = () => {
             </section>
 
 
-            <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 p-4">
-                <div className="mb-4 md:mb-0">
-                    <h3 className="text-lg font-bold mb-2">Information</h3>
-                    <ul>
-                        <li> 1</li>
-                        <li> 2</li>
-                        <li> 3</li>
-                    </ul>
-                </div>
-                <div className="mb-4 md:mb-0">
-                    <h3 className="text-lg font-bold mb-2">PC Parts</h3>
-                    <ul>
-                        <li> 1</li>
-                        <li> 2</li>
-                        <li> 3</li>
-                    </ul>
-                </div>
-                <div className="mb-4 md:mb-0">
-                    <h3 className="text-lg font-bold mb-2">Desktop Pcs</h3>
-                    <ul>
-                        <li> 1</li>
-                        <li> 2</li>
-                        <li> 3</li>
-                    </ul>
-                </div>
-                <div className="mb-4 md:mb-0">
-                    <h3 className="text-lg font-bold mb-2">Laptops</h3>
-                    <ul>
-                        <li> 1</li>
-                        <li> 2</li>
-                        <li> 3</li>
-                    </ul>
-                </div>
-                <div className="mb-4 md:mb-0">
-                    <h3 className="text-lg font-bold mb-2">Address</h3>
-                    <ul>
-                        <li> 1</li>
-                        <li> 2</li>
-                        <li> 3</li>
-                    </ul>
+            <section className="p-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
+                    <article className="mb-4 md:mb-0">
+                        <h3 className="text-lg font-bold mb-2 cursor-pointer" onClick={() => toggleAccordion(1)} >
+                            Information
+                        </h3>
+                        {activeAccordion === 1 && (
+                            <ul>
+                                <li>Item 1</li>
+                                <li>Item 2</li>
+                                <li>Item 3</li>
+                            </ul>
+                        )}
+                    </article>
+                    <article className="mb-4 md:mb-0">
+                        <h3 className="text-lg font-bold mb-2 cursor-pointer" onClick={() => toggleAccordion(2)} >
+                            PC Parts
+                        </h3>
+                        {activeAccordion === 2 && (
+                            <ul>
+                                <li>Item 1</li>
+                                <li>Item 2</li>
+                                <li>Item 3</li>
+                            </ul>
+                        )}
+                    </article>
+                    <article className="mb-4 md:mb-0">
+                        <h3 className="text-lg font-bold mb-2 cursor-pointer" onClick={() => toggleAccordion(3)} >
+                            Desktop Parts
+                        </h3>
+                        {activeAccordion === 3 && (
+                            <ul>
+                                <li>Item 1</li>
+                                <li>Item 2</li>
+                                <li>Item 3</li>
+                            </ul>
+                        )}
+                    </article>
+                    <article className="mb-4 md:mb-0">
+                        <h3 className="text-lg font-bold mb-2 cursor-pointer" onClick={() => toggleAccordion(4)} >
+                            Laptops
+                        </h3>
+                        {activeAccordion === 4 && (
+                            <ul>
+                                <li>Item 1</li>
+                                <li>Item 2</li>
+                                <li>Item 3</li>
+                            </ul>
+                        )}
+                    </article>
+                    <article className="mb-4 md:mb-0">
+                        <h3 className="text-lg font-bold mb-2 cursor-pointer" onClick={() => toggleAccordion(5)} >
+                            Address
+                        </h3>
+                        {activeAccordion === 5 && (
+                            <ul>
+                                <li>Item 1</li>
+                                <li>Item 2</li>
+                                <li>Item 3</li>
+                            </ul>
+                        )}
+                    </article>
                 </div>
             </section>
 
