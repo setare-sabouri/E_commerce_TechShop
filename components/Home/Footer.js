@@ -105,12 +105,13 @@ const Footer = () => {
                     <img src="mastercard.png" alt="MasterCard" />
                     <img src="paypal.png" alt="PayPal" />
                 </div>
+                <div>
+                    <p>&copy; {new Date().getFullYear()} TechShop</p>
+                </div>
             </section>
 
 
-            <section className="bg-gray-800 text-center p-2">
-                <p>&copy; {new Date().getFullYear()} TechShop</p>
-            </section>
+
         </footer>
     );
 }
