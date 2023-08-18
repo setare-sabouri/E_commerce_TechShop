@@ -11,12 +11,27 @@ const Navbar = () => {
         setCartItemsCount(cart.cartItems.reduce((a, c) => a + c.quantity, 0));
     }, [cart.cartItems]);
     return (
-        <nav className="flex h-12 items-center px-4 justify-between shadow-md">
+        <nav className="flex  items-center px-4 py-2  justify-between shadow-md">
             <Link href="/">
-                <a className="text-lg font-bold">Tech Shop</a>
+                <a>
+                    <img src="./Logo.png" alt='Tech Shop logo'></img>
+                </a>
             </Link>
+            <ul className='flex gap-4 justify-center items-center'>
+                <li>Laptops</li>
+                <li>Desktop PCs</li>
+                <li>Networking Devices</li>
+                <li>Printers & Scanners</li>
+                <li>PC Parts</li>
+                <li>All Other Products</li>
+                <li>Repairs</li>
+                <li>
+                    <button className='shadow-black border p-2 rounded-2xl'>Our Deals</button>
+                </li>
+
+            </ul>
             <div>
-                <Link href="/cart">
+                <Link href="/Card/cart">
                     <a className="p-2">
                         Cart
                         {cartItemsCount > 0 && (
@@ -26,9 +41,10 @@ const Navbar = () => {
                         )}
                     </a>
                 </Link>
-                <Link href="/login">
+                <Link href="/Login/login">
                     <a className="p-2">Login</a>
                 </Link>
+                <Link href="/Login/login">Profile pic</Link>
             </div>
         </nav>
     )

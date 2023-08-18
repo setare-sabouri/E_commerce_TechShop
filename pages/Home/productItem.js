@@ -4,7 +4,7 @@ import React from 'react';
 export default function ProductItem({ product }) {
     return (
         <article className="flex flex-col">
-            <Link href={`/product/${product.slug}`} >
+            <Link href={`/Product/${product.slug}`} >
                 <img
                     src={product.image}
                     alt={product.name}
