@@ -43,7 +43,7 @@ const Footer = () => {
     }, []);
 
     return (
-        <footer className="bg-gray-900 text-white">
+        <footer className="bg-black text-white flex flex-col gap-2 px-5 py-4 md:px-20">
 
             <section className="p-4 grid grid-cols-1 gap-1 md:grid-cols-2">
                 <div className='flex flex-col'>
@@ -62,7 +62,6 @@ const Footer = () => {
                     </button>
                 </div>
             </section>
-
 
             <section className="p-4">
                 <div className="grid grid-cols-1  md:grid-cols-5 gap-2">
@@ -99,24 +98,22 @@ const Footer = () => {
                 </div>
             </section>
 
-
-            <section className="flex justify-between items-center p-4">
-                <ul className="flex space-x-4">
-                    <li><a href="#"><img src="facebook-icon.png" alt="Facebook" /></a></li>
-                    <li><a href="#"><img src="twitter-icon.png" alt="Twitter" /></a></li>
-                    <li><a href="#"><img src="instagram-icon.png" alt="Instagram" /></a></li>
+            <section className="grid grid-cols-5 items-center place-content-between">
+                <ul className="flex gap-2 col-span-1">
+                    <li><a href="#"><img src="footer/facebook.png" alt="Facebook" /></a></li>
+                    <li><a href="#"><img src="footer/instagram.png" alt="Instagram" /></a></li>
                 </ul>
-                <div className="flex space-x-4">
-                    <img src="visa-card.png" alt="Visa" />
-                    <img src="mastercard.png" alt="MasterCard" />
-                    <img src="paypal.png" alt="PayPal" />
+                <div className='flex col-span-3 justify-center gap-2'>
+                    <img src="footer/paypal.png" alt="PayPal" />
+                    <img src="footer/visa.png" alt="Visa card" />
+                    <img src="footer/maestro.png" alt="Master Card" />
+                    <img src="footer/discover.png" alt="Discover card" />
+                    <img src="footer/american-express.png" alt="American express card" />
                 </div>
-                <div>
+                <div className='flex col-span-1 justify-end'>
                     <p>&copy; {new Date().getFullYear()} TechShop</p>
                 </div>
             </section>
-
-
 
         </footer>
     );
