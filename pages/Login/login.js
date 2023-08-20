@@ -3,11 +3,7 @@ import Layout from '../../Layout/Layout';
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
 const LoginScreen = () => {
-    const {
-        handleSubmit,
-        register,
-        formState: { errors },
-    } = useForm();
+    const { handleSubmit, register, formState: { errors } } = useForm();
     const submitHandler = ({ email, password }) => {
         console.log(email, password);
     };

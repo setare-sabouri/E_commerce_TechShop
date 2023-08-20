@@ -1,8 +1,10 @@
 import React from 'react'
-
+import Layout from '../../Layout/Layout';
 const Shipping = () => {
     return (
-        <div>Shipping page comes here</div>
+        <Layout title="Shipping">
+            <div>Shipping page comes here</div>
+        </Layout>
     )
 }
 
