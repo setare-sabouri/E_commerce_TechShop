@@ -26,7 +26,7 @@ const Navbar = () => {
                 <li>All Other Products</li>
                 <li>Repairs</li>
                 <li>
-                    <button className='shadow-black border p-2 rounded-2xl'>Our Deals</button>
+                    <button className='shadow-black border px-6 py-2 rounded-3xl border-blue-800 text-blue-800'>Our Deals</button>
                 </li>
 
             </ul>
