@@ -1,36 +1,45 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import Link from 'next/link';
-
 import Store from '../../utils/Store';
-import { useState, useEffect } from 'react';
+
 const Navbar = () => {
     const { state } = useContext(Store);
     const { cart } = state;
     const [cartItemsCount, setCartItemsCount] = useState(0);
+
     useEffect(() => {
         setCartItemsCount(cart.cartItems.reduce((a, c) => a + c.quantity, 0));
     }, [cart.cartItems]);
+
+    const toggleMobileMenu = () => {
+        setMobileMenuOpen(!isMobileMenuOpen);
+    };
+
+    const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+
     return (
-        <nav className="flex  items-center px-4 py-2  justify-between shadow-md">
+        <nav className="flex flex-col md:flex-row items-center px-4 py-2 justify-between shadow-md">
             <Link href="/">
                 <a>
-                    <img src="./Logo.png" alt='Tech Shop logo'></img>
+                    <img src="./Logo.png" alt="Tech Shop logo" />
                 </a>
             </Link>
-            <ul className='flex gap-4 justify-center items-center'>
-                <li>Laptops</li>
-                <li>Desktop PCs</li>
-                <li>Networking Devices</li>
-                <li>Printers & Scanners</li>
-                <li>PC Parts</li>
-                <li>All Other Products</li>
-                <li>Repairs</li>
+            {/* Desktop navigation links */}
+            <ul className="flex gap-4 justify-center items-center md:flex-row hidden md:flex">
+                <li className="cursor-pointer">Laptops</li>
+                <li className="cursor-pointer">Desktop PCs</li>
+                <li className="cursor-pointer">Networking Devices</li>
+                <li className="cursor-pointer">Printers & Scanners</li>
+                <li className="cursor-pointer">PC Parts</li>
+                <li className="cursor-pointer">All Other Products</li>
+                <li className="cursor-pointer">Repairs</li>
                 <li>
-                    <button className='shadow-black border px-6 py-2 rounded-3xl border-blue-800 text-blue-800'>Our Deals</button>
+                    <button className="shadow-black border px-6 py-2 rounded-3xl border-blue-800 text-blue-800">
+                        Our Deals
+                    </button>
                 </li>
-
             </ul>
-            <div>
+            <div className="md:flex items-center">
                 <Link href="/Card/cart">
                     <a className="p-2">
                         Cart
@@ -46,8 +55,32 @@ const Navbar = () => {
                 </Link>
                 <Link href="/Login/login">Profile pic</Link>
             </div>
+            {/* Mobile menu button */}
+            <button
+                className="block md:hidden p-2"
+                onClick={toggleMobileMenu}
+            >
+                Menu
+            </button>
+            {/* Mobile navigation links */}
+            {isMobileMenuOpen && (
+                <ul className="md:hidden flex flex-col gap-2">
+                    <li className="cursor-pointer">Laptops</li>
+                    <li className="cursor-pointer">Desktop PCs</li>
+                    <li className="cursor-pointer">Networking Devices</li>
+                    <li className="cursor-pointer">Printers & Scanners</li>
+                    <li className="cursor-pointer">PC Parts</li>
+                    <li className="cursor-pointer">All Other Products</li>
+                    <li className="cursor-pointer">Repairs</li>
+                    <li>
+                        <button className="shadow-black border px-6 py-2 rounded-3xl border-blue-800 text-blue-800">
+                            Our Deals
+                        </button>
+                    </li>
+                </ul>
+            )}
         </nav>
-    )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;
