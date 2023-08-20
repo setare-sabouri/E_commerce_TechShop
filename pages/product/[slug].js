@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useContext } from 'react';
 import Layout from '../../Layout/Layout';
@@ -54,7 +53,7 @@ export default function ProductScreen() {
                 <div className='md:col-span-1 flex items-center'>
                     <ul className=' flex flex-col gap-4'>
                         <li className='text-lg'>
-                            <h1 className="text-4xl">{product.name}</h1>
+                            <h1 className="text-2xl font-bold">{product.name}</h1>
                         </li>
                         <li className='text-lg'>Category: {product.category}</li>
                         <li className='text-lg'>Brand: {product.brand}</li>
