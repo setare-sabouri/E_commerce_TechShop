@@ -9,7 +9,7 @@ import 'swiper/css/scrollbar';
 const Slider = () => {
   return (
     <Swiper
-      className="md:w-70 xs:w-60 lg:w-70 h-auto  flex items-center justify-center"
+      className="md:w-70 xs:w-60 lg:w-70 h-auto "
       modules={[Navigation, Scrollbar, A11y]}
       spaceBetween={50}
       slidesPerView={1}

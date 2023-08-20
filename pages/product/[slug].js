@@ -32,46 +32,51 @@ export default function ProductScreen() {
 
     return (
         <Layout title={product.name}>
-            <div className="grid md:grid-cols-4 md:gap-3">
-                <div>
-                    <ul>
-                        <li>
-                            <h1 className="text-lg">{product.name}</h1>
+            <div className='grid grid-rows-1 border-b p-4'>
+                <div className="grid grid-cols-4">
+                    <div className="col-span-1 flex">
+                        <div>Price : </div>
+                        <div>${product.price}</div>
+                    </div>
+                    <div className="col-span-2 flex ">
+                        <div>Status :</div>
+                        <div> {product.countInStock > 0 ? 'In stock' : 'Unavailable'}</div>
+                    </div>
+                    <button
+                        className="col-span-1 primary-button "
+                        onClick={addToCartHandler}
+                    >
+                        Add to cart
+                    </button>
+                </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4  p-4">
+                <div className='md:col-span-1 flex items-center'>
+                    <ul className=' flex flex-col gap-4'>
+                        <li className='text-lg'>
+                            <h1 className="text-4xl">{product.name}</h1>
                         </li>
-                        <li>Category: {product.category}</li>
-                        <li>Brand: {product.brand}</li>
-                        <li>
+                        <li className='text-lg'>Category: {product.category}</li>
+                        <li className='text-lg'>Brand: {product.brand}</li>
+                        <li className='text-lg'>
                             {product.rating} of {product.numReviews} reviews
                         </li>
                         <li>Description: {product.description}</li>
                     </ul>
                 </div>
-                <div>
-                    <div className="card p-5">
-                        <div className="mb-2 flex justify-between">
-                            <div>Price</div>
-                            <div>${product.price}</div>
-                        </div>
-                        <div className="mb-2 flex justify-between">
-                            <div>Status</div>
-                            <div>{product.countInStock > 0 ? 'In stock' : 'Unavailable'}</div>
-                        </div>
-                        <button
-                            className="primary-button w-full"
-                            onClick={addToCartHandler}
-                        >
-                            Add to cart
-                        </button>
+
+                <div className="md:col-span-1 ">
+                    <div >
+                        <Image
+                            className='rounded'
+                            src={product.image}
+                            alt={product.name}
+                            width={200}
+                            height={200}
+                            layout='responsive'
+                        ></Image>
                     </div>
-                </div>
-                <div className="md:col-span-2">
-                    <Image
-                        src={product.image}
-                        alt={product.name}
-                        width={640}
-                        height={640}
-                        layout="responsive"
-                    ></Image>
+
                 </div>
             </div>
         </Layout>
