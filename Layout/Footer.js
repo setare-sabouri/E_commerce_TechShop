@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 const articles = [
   {
     title: 'Information',
@@ -63,6 +64,7 @@ const articles = [
     ],
   },
 ];
+
 const Footer = () => {
   const [activeAccordion, setActiveAccordion] = useState(null);
   const [isWideScreen, setIsWideScreen] = useState(false);
@@ -148,21 +150,21 @@ const Footer = () => {
         <ul className="flex gap-2 col-span-1">
           <li>
             <a href="#">
-              <img src="footer/facebook.png" alt="Facebook" />
+              <Image width={25} height={25} src="/footer/facebook.png" alt="Facebook" />
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="footer/instagram.png" alt="Instagram" />
+              <Image width={25} height={25} src="/footer/instagram.png" alt="Instagram" />
             </a>
           </li>
         </ul>
         <div className="flex col-span-3 justify-center gap-2">
-          <img src="footer/paypal.png" alt="PayPal" />
-          <img src="footer/visa.png" alt="Visa card" />
-          <img src="footer/maestro.png" alt="Master Card" />
-          <img src="footer/discover.png" alt="Discover card" />
-          <img src="footer/american-express.png" alt="American express card" />
+          <Image width={35} height={25} src="/footer/paypal.png" alt="PayPal" />
+          <Image width={35} height={25} src="/footer/visa.png" alt="Visa card" />
+          <Image width={35} height={25} src="/footer/maestro.png" alt="Master Card" />
+          <Image width={35} height={25} src="/footer/discover.png" alt="Discover card" />
+          <Image width={35} height={25} src="/footer/american-express.png" alt="American express card" />
         </div>
         <div className="flex col-span-1 justify-end">
           <p>&copy; {new Date().getFullYear()} TechShop</p>

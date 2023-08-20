@@ -2,23 +2,25 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useContext } from 'react';
 import { XCircleIcon } from '@heroicons/react/outline';
-import Layout from '../../components/Layout/Layout';
+import Layout from '../../Layout/Layout';
 import Store from '../../utils/Store';
 import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
+
 function CartScreen() {
     const router = useRouter();
     const { state, dispatch } = useContext(Store);
-    const {
-        cart: { cartItems },
-    } = state;
+    const { cart: { cartItems } } = state;
+
     const removeItemHandler = (item) => {
         dispatch({ type: 'CART_REMOVE_ITEM', payload: item });
     };
+
     const updateCartHandler = (item, qty) => {
         const quantity = Number(qty);
         dispatch({ type: 'CART_ADD_ITEM', payload: { ...item, quantity } });
     };
+
     return (
         <Layout title="Shopping Cart">
             <h1 className="mb-4 text-xl">Shopping Cart</h1>

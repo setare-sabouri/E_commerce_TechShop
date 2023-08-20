@@ -1,10 +1,12 @@
 import ProductItem from './productItem';
 import data from '../../utils/data';
 import Slider from './Slider';
+
+
 const Home = () => {
     return (
         <>
-            <Slider></Slider>
+            <Slider />
             <h1 className=' className="flex min-h-screen flex-col items-center justify-between p-24"'>
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
                     {data.products.map((product) => (

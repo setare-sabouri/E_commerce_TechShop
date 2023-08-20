@@ -1,3 +1,4 @@
+import Image from "next/image";
 const Announcement = () => {
   return (
     <div className="bg-black text-white text-[10px] md:text-sm flex gap-4 justify-between p-4 text-center " role="alert">
@@ -6,10 +7,20 @@ const Announcement = () => {
       <div className="flex gap-1 items-center">
         <p>Call Us: (00) 1234 5678</p>
         <a href="#">
-          <img src="footer/facebook.png" alt="Facebook" />
+          <Image
+            src="/footer/facebook.png"
+            alt="Facebook"
+            width={25}
+            height={25}
+          />
         </a>
         <a href="#">
-          <img src="footer/instagram.png" alt="Instagram" />
+          <Image
+            src="/footer/instagram.png"
+            alt="Instagram"
+            width={25}
+            height={25}
+          />
         </a>
       </div>
 

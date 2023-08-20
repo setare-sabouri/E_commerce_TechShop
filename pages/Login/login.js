@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '../../components/Layout/Layout';
+import Layout from '../../Layout/Layout';
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
 export default function LoginScreen() {

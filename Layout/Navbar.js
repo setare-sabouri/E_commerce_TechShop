@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import Link from 'next/link';
-import Store from '../../utils/Store';
-
+import Store from '../utils/Store';
+import Image from 'next/image';
 const Navbar = () => {
     const { state } = useContext(Store);
     const { cart } = state;
@@ -21,7 +21,12 @@ const Navbar = () => {
         <nav className="flex flex-col md:flex-row items-center px-4 py-2 justify-between shadow-md">
             <Link href="/">
                 <a>
-                    <img src="./Logo.png" alt="Tech Shop logo" />
+                    <Image
+                        src="/Logo.png"
+                        alt="Tech Shop logo"
+                        width={90}
+                        height={70}
+                    />
                 </a>
             </Link>
             {/* Desktop navigation links */}
