@@ -2,10 +2,16 @@ import React, { useContext, useState, useEffect } from 'react';
 import Link from 'next/link';
 import Store from '../utils/Store';
 import Image from 'next/image';
+import { useSession } from 'next-auth/react';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Navbar = () => {
+    <ToastContainer position="bottom-center" limit={1} />
+
     const { state } = useContext(Store);
     const { cart } = state;
     const [cartItemsCount, setCartItemsCount] = useState(0);
+    const { status, data: session } = useSession();
 
     useEffect(() => {
         setCartItemsCount(cart.cartItems.reduce((a, c) => a + c.quantity, 0));
@@ -55,16 +61,17 @@ const Navbar = () => {
                         )}
                     </a>
                 </Link>
-                <Link href="/Login/login">
-                    <a className="p-2">Login</a>
-                </Link>
+                {status === 'loading' ? ('Loading') :
+                    session?.user ? (session.user.name) : (
+                        <Link href="/Login/login">
+                            <a className="p-2">Login</a>
+                        </Link>
+                    )}
+
                 <Link href="/Login/login">Profile pic</Link>
             </div>
             {/* Mobile menu button */}
-            <button
-                className="block md:hidden p-2"
-                onClick={toggleMobileMenu}
-            >
+            <button className="block md:hidden p-2" onClick={toggleMobileMenu}>
                 Menu
             </button>
             {/* Mobile navigation links */}
