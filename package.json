@@ -1,21 +1,21 @@
 {
-  "name": "tech-shop",
+  "name": "Tech-shop",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "lint": "next lint"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^1.0.6",
+   
     "autoprefixer": "^10.4.14",
     "bcryptjs": "^2.4.3",
     "js-cookie": "^3.0.5",
+   
     "mongodb": "^5.7.0",
     "mongoose": "^7.4.3",
     "next": "^12.3.4",
@@ -27,19 +27,11 @@
     "swiper": "^10.2.0"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^7.3.2",
-    "@storybook/addon-interactions": "^7.3.2",
-    "@storybook/addon-links": "^7.3.2",
-    "@storybook/addon-onboarding": "^1.0.8",
-    "@storybook/blocks": "^7.3.2",
-    "@storybook/nextjs": "^7.3.2",
-    "@storybook/react": "^7.3.2",
-    "@storybook/testing-library": "^0.2.0",
+
     "eslint": "8.14.0",
     "eslint-config-next": "12.1.5",
     "eslint-plugin-storybook": "^0.6.13",
     "postcss": "^8.4.12",
-    "storybook": "^7.3.2",
     "tailwindcss": "^3.0.24"
   }
 }
