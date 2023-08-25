@@ -1,16 +1,12 @@
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 import React, { useContext } from 'react';
 import Layout from '../../Layout/Layout';
-import data from '../../utils/data';
 import Store from '../../utils/Store';
+import { FetchOneProduct } from '../../utils/API';
 
-export default function ProductScreen() {
+export default function ProductScreen(props) {
+    const { product } = props;
     const { state, dispatch } = useContext(Store);
-    const router = useRouter();
-    const { query } = useRouter();
-    const { slug } = query;
-    const product = data.products.find((x) => x.slug === slug);
 
     if (!product) {
         return <div>Produt Not Found</div>;
@@ -26,7 +22,7 @@ export default function ProductScreen() {
         }
 
         dispatch({ type: 'CART_ADD_ITEM', payload: { ...product, quantity } });
-        // router.push('/cart');
+
     };
 
     return (
@@ -80,4 +76,9 @@ export default function ProductScreen() {
             </div>
         </Layout>
     );
+}
+
+
+export async function getServerSideProps(context) {
+    return FetchOneProduct(context);
 }
