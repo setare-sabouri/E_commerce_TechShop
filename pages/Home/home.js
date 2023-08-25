@@ -1,5 +1,4 @@
 import ProductItem from './productItem';
-import data from '../../utils/data';
 import Slider from './Slider';
 
 const Home = ({ products }) => {

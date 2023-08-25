@@ -20,7 +20,7 @@ async function connect() {
     connection.isConnected = db.connections[0].readyState;
 }
 
-function convertDocToObj(doc) {
+function convertDocOptToObj(doc) {
     doc._id = doc._id.toString();
     doc.createdAt = doc.createdAt.toString();
     doc.updatedAt = doc.updatedAt.toString();
@@ -37,5 +37,5 @@ async function disconnect() {
     }
 }
 
-const db = { connect, disconnect, convertDocToObj };
+const db = { connect, disconnect, convertDocOptToObj };
 export default db;
