@@ -1,10 +1,13 @@
 import Layout from '../Layout/Layout';
-
 import Home from './Home/home';
-export default function App() {
+import { getServerSideProps } from '../utils/API'
+
+export default function App({ products }) {
     return (
         <Layout title="Home Page">
-            <Home></Home>
+            <Home products={products} />
         </Layout>
     );
 }
+
+export { getServerSideProps }
