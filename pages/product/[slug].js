@@ -14,7 +14,6 @@ export default function ProductScreen(props) {
                 < h1 className='flex justify-center text-3xl' > Produt Not Found</h1 >
             </Layout >
         )
-
     }
 
     const addToCartHandler = () => {
@@ -26,7 +25,6 @@ export default function ProductScreen(props) {
             return;
         }
         dispatch({ type: 'CART_ADD_ITEM', payload: { ...product, quantity } });
-
     };
 
     return (
