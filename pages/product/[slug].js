@@ -9,7 +9,12 @@ export default function ProductScreen(props) {
     const { state, dispatch } = useContext(Store);
 
     if (!product) {
-        return <div>Produt Not Found</div>;
+        return (
+            <Layout title={"Product not Found"}>
+                < h1 className='flex justify-center text-3xl' > Produt Not Found</h1 >
+            </Layout >
+        )
+
     }
 
     const addToCartHandler = () => {

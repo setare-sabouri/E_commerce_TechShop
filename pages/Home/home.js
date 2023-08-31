@@ -11,7 +11,6 @@ const Home = ({ products }) => {
                         <ProductItem
                             product={product}
                             key={product.slug}
-
                         ></ProductItem>
                     ))}
                 </div>
