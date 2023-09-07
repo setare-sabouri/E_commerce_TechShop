@@ -19,7 +19,7 @@ const data = {
     {
       name: 'EX DiSPLAY : MSI Pro 16',
       slug: 'EX DiSPLAY : MSI Pro 16',
-      image: '/images/sample.jpg',
+      image: '/images/msiPro16Display.webp',
       price: 100,
       brand: 'Asus',
       category: 'Computer and Laptops',
@@ -31,7 +31,7 @@ const data = {
     {
       name: 'SuperBook Pro',
       slug: 'superbook-pro',
-      image: '/images/sample.jpg',
+      image: '/images/superBookPro16.webp',
       price: 550,
       brand: 'Apple',
       category: 'Computer and Laptops',
@@ -43,7 +43,7 @@ const data = {
     {
       name: 'Lenovo Flex 5',
       slug: 'lenovo-flex-5',
-      image: '/images/sample.jpg',
+      image: '/images/lenovoFlex5.webp',
       price: 800,
       brand: 'Lenovo',
       category: 'Computer and Laptops',
@@ -55,7 +55,7 @@ const data = {
     {
       name: 'MSI Gaming Laptop',
       slug: 'msi-gaming-laptop',
-      image: '/images/sample.jpg',
+      image: '/images/msiGame.webp',
       price: 1200,
       brand: 'MSI',
       category: 'Computer and Laptops',
@@ -67,7 +67,7 @@ const data = {
     {
       name: 'Razer Blade 15',
       slug: 'razer-blade-15',
-      image: '/images/sample.jpg',
+      image: '/images/razerBlade15.jpeg',
       price: 1800,
       brand: 'Razer',
       category: 'Computer and Laptops',
@@ -79,7 +79,7 @@ const data = {
     {
       name: 'Corsair Vengeance LPX',
       slug: 'corsair-vengeance-lpx',
-      image: '/images/sample.jpg',
+      image: '/images/corsair.webp',
       price: 90,
       brand: 'Corsair',
       category: 'Storage and Memory',
@@ -91,7 +91,7 @@ const data = {
     {
       name: 'Samsung 1TB SSD',
       slug: 'samsung-1tb-ssd',
-      image: '/images/sample.jpg',
+      image: '/images/samsung1tbssd.webp',
       price: 200,
       brand: 'Samsung',
       category: 'Storage and Memory',
@@ -103,7 +103,7 @@ const data = {
     {
       name: 'WD Elements External HDD',
       slug: 'wd-elements-external-hdd',
-      image: '/images/sample.jpg',
+      image: '/images/wdElements.webp',
       price: 80,
       brand: 'Western Digital',
       category: 'Storage and Memory',
