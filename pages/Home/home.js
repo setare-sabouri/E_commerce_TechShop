@@ -1,11 +1,11 @@
 import ProductItem from './productItem';
-import Slider from './Slider';
+import Slidercmp from './Slider';
 
 const Home = ({ products }) => {
     return (
         <>
-            <Slider />
-            <h1 className=' className="flex min-h-screen flex-col items-center justify-between p-24"'>
+            <Slidercmp />
+            <h1 className=' flex min-h-screen flex-col items-center justify-between p-6'>
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
                     {products.map((product) => (
                         <ProductItem

@@ -1,29 +1,54 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
+import React from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-import { Navigation, Scrollbar, A11y } from 'swiper/modules';
+const Slidercmp = () => {
+  const settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <CustomNextArrow />,
+    prevArrow: <CustomPrevArrow />
+  };
 
-import 'swiper/css/navigation';
-import 'swiper/css/scrollbar';
-
-const Slider = () => {
   return (
-    <Swiper
-      className="md:w-70 xs:w-60 lg:w-70 h-auto "
-      modules={[Navigation, Scrollbar, A11y]}
-      spaceBetween={50}
-      slidesPerView={1}
-      navigation
-      scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
-    >
-      <SwiperSlide><img src='./images/slider.png' /></SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
-    </Swiper>
+    <Slider {...settings}>
+      <div>
+        <img src='./images/slider.png' alt='Banner 1' />
+      </div>
+      <div>
+        <img src='./images/bannerAll.jpg' alt='Banner 2' />
+      </div>
+      <div>
+        <img src='./images/ACER-predator-gaming-laptop-banner.jpg' alt='Banner 3' />
+      </div>
+      <div>
+        <img src='./images/ACER-predator-gaming-laptop-banner.jpg' alt='Banner 4' />
+      </div>
+    </Slider>
   );
 };
 
-export default Slider;
+const CustomNextArrow = (props) => (
+  <div
+    className={props.className}
+    style={{ ...props.style, display: 'block', background: 'green', width: '50px', height: '50px', zIndex: 2 }}
+    onClick={props.onClick}
+  >
+    Next
+  </div>
+);
+
+const CustomPrevArrow = (props) => (
+  <div
+    className={props.className}
+    style={{ ...props.style, display: 'block', background: 'red', width: '50px', height: '50px', zIndex: 2 }}
+    onClick={props.onClick}
+  >
+    Prev
+  </div>
+);
+
+export default Slidercmp;
