@@ -34,7 +34,7 @@ const Slidercmp = () => {
 const CustomNextArrow = (props) => (
   <div
     className={props.className}
-    style={{ ...props.style, display: 'block', width: '50px', height: '50px', zIndex: 2, right: 0 }}
+    style={{ ...props.style, display: 'block', width: '50px', height: '50px', zIndex: 2 }}
     onClick={props.onClick}
   >
     Next
