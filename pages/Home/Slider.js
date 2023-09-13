@@ -16,16 +16,16 @@ const Slidercmp = () => {
   return (
     <Slider {...settings}>
       <div>
-        <img src='./images/slider.png' alt='Banner 1' />
+        <img src='./images/banner/ROG-Zephyrus-banner-2.jpg' alt='Banner 1' />
       </div>
       <div>
-        <img src='./images/bannerAll.jpg' alt='Banner 2' />
+        <img src='./images/banner/wide-range-of-laptops.jpg' alt='Banner 2' />
       </div>
       <div>
-        <img src='./images/ACER-predator-gaming-laptop-banner.jpg' alt='Banner 3' />
+        <img src='./images/banner/MSI-AMG-Stealth16-banner2.jpg' alt='Banner 3' />
       </div>
       <div>
-        <img src='./images/ACER-predator-gaming-laptop-banner.jpg' alt='Banner 4' />
+        <img src='./images/banner/g5-gaming-banner2.jpg' alt='Banner 4' />
       </div>
     </Slider>
   );
@@ -34,7 +34,7 @@ const Slidercmp = () => {
 const CustomNextArrow = (props) => (
   <div
     className={props.className}
-    style={{ ...props.style, display: 'block', background: 'green', width: '50px', height: '50px', zIndex: 2 }}
+    style={{ ...props.style, display: 'block', width: '50px', height: '50px', zIndex: 2, right: 0 }}
     onClick={props.onClick}
   >
     Next
@@ -44,7 +44,7 @@ const CustomNextArrow = (props) => (
 const CustomPrevArrow = (props) => (
   <div
     className={props.className}
-    style={{ ...props.style, display: 'block', background: 'red', width: '50px', height: '50px', zIndex: 2 }}
+    style={{ ...props.style, display: 'block', width: '50px', height: '50px', zIndex: 2, left: 0 }}
     onClick={props.onClick}
   >
     Prev
