@@ -3,7 +3,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import Announcement from './Announcement';
 
-export default function Layout({ title, children }) {
+export default function Layout({ title, children }: { title: string, children: any }) {
   return (
     <>
       <Head>

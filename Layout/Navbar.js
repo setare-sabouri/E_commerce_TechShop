@@ -46,7 +46,7 @@ const Navbar = () => {
             {/* Desktop navigation links */}
             <ul className="flex gap-4 justify-center items-center md:flex-row hidden md:flex">
                 <li className="cursor-pointer">
-                    <Link href="/Components/Laptops/laptops">Laptops</Link>
+                    <Link href="/Components/Laptops/Laptops">Laptops</Link>
                 </li>
                 <li className="cursor-pointer">Desktop PCs</li>
                 <li className="cursor-pointer">Networking Devices</li>
@@ -120,8 +120,10 @@ const Navbar = () => {
             {
                 isMobileMenuOpen && (
                     <ul className="md:hidden flex flex-col gap-2">
+                        <li className="cursor-pointer">
+                            <Link href="/Components/Laptops/Laptops">Laptops</Link>
+                        </li>
 
-                        <li className="cursor-pointer">Laptops</li>
                         <li className="cursor-pointer">Desktop PCs</li>
                         <li className="cursor-pointer">Networking Devices</li>
                         <li className="cursor-pointer">Printers & Scanners</li>
