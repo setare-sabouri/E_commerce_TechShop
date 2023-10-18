@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import './typography.scss';
+@import './mixins.scss';
 
 * {
   box-sizing: border-box;
@@ -14,6 +15,10 @@ html {
   overflow-x: hidden;
 }
 
+
 .heading1 {
   @include heading1;
+}
+.canvas-wrapper{
+  @include canvas-wrapper;
 }

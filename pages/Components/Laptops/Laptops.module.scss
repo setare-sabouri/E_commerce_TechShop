@@ -1,15 +1,19 @@
 .laptops{
    
-
     &__title {
         font-variant: petite-caps;
         transition: all 400ms cubic-bezier(0.17, 0.17, 0.67, 1);
-        width: fit-content;
+        width: 80%;
+        margin: 2.5rem auto;
 
         &:hover {
             transition: all 400ms cubic-bezier(0.17, 0.17, 0.67, 1);
             color: rgb(16, 100, 64);
             opacity: 0.7;
           }
+    }
+    
+    &__canvas{
+        background-color: rgb(233, 229, 226);
     }
 }
