@@ -1,7 +1,15 @@
 .laptops{
-    background-color: sandybrown;
+   
 
-    &__paras {
-        background-color: rebeccapurple;
+    &__title {
+        font-variant: petite-caps;
+        transition: all 400ms cubic-bezier(0.17, 0.17, 0.67, 1);
+        width: fit-content;
+
+        &:hover {
+            transition: all 400ms cubic-bezier(0.17, 0.17, 0.67, 1);
+            color: rgb(16, 100, 64);
+            opacity: 0.7;
+          }
     }
 }

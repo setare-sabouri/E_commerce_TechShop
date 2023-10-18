@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import './typography.scss';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.heading1 {
+  @include heading1;
+}
