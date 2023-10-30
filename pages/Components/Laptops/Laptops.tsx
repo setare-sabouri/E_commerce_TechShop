@@ -3,7 +3,14 @@ import Layout from "../../../Layout/Layout";
 import styles from "./Laptops.module.scss";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
+import GlobalCanvas from "../GlobalCanvas/GlobalCanvas";
+
 const Laptops = () => {
+  // useFrame(() => {
+  //   console.log("frame");
+  // });
+
   return (
     <Layout title="laptops Page">
       <div className={styles.laptops}>
@@ -11,7 +18,7 @@ const Laptops = () => {
       </div>
 
       <div className="canvas-wrapper">
-        <Canvas className={`${styles.laptops__canvas} `}>
+        <GlobalCanvas className={`${styles.laptops__canvas} `}>
           <mesh position={[-1, 1, 0]}>
             <sphereGeometry />
             <meshBasicMaterial color="orange" />
@@ -25,7 +32,7 @@ const Laptops = () => {
             <meshBasicMaterial color="green" />
           </mesh>
           <OrbitControls makeDefault />
-        </Canvas>
+        </GlobalCanvas>
       </div>
     </Layout>
   );
