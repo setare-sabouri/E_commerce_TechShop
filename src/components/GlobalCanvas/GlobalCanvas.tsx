@@ -1,7 +1,6 @@
 import React from "react";
 import { ReactNode } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Environment } from "@react-three/drei";
 import { Suspense } from "react";
 interface GlobalCanvasProps {
   children: ReactNode;

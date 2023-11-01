@@ -27,7 +27,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/components/Laptops/Laptops.tsx"  ],
+, "src/pages/Laptops/Laptops.tsx"  ],
   "exclude": [
     "node_modules"
   ]

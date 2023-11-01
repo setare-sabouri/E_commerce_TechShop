@@ -1,7 +1,6 @@
 import React from "react";
 import Layout from "@layout/Layout";
 import styles from "./Laptops.module.scss";
-import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import GlobalCanvas from "@components/GlobalCanvas/GlobalCanvas";
