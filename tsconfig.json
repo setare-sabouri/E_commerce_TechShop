@@ -18,15 +18,16 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    // "paths": {
-    //   "@*":["./"]
-    // }
+     "paths": {
+       "@*":["./src/*"],
+       "@styles/*":["./styles/*"]
+     }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/pages/Components/Laptops/Laptops.tsx"  ],
+, "src/components/Laptops/Laptops.tsx"  ],
   "exclude": [
     "node_modules"
   ]

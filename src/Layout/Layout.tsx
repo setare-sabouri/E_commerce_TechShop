@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import Announcement from "./Announcement";
+import Navbar from "@layout/Navbar";
+import Footer from "@layout/Footer";
+import Announcement from "@layout/Announcement";
 
 export default function Layout({
   title,

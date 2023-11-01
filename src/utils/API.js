@@ -1,5 +1,5 @@
-import db from './db'
-import Product from '../../models/Product';
+import db from '@utils/db'
+import Product from '@models/Product';
 
 
 // fetching all products
