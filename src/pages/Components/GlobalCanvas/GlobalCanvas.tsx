@@ -10,10 +10,7 @@ interface GlobalCanvasProps {
 const GlobalCanvas: React.FC<GlobalCanvasProps> = ({ children, className }) => {
   return (
     <Canvas className={className}>
-      <Suspense fallback={null}>
-        <Environment preset="city" />
-        {children}
-      </Suspense>
+      <Suspense fallback={null}>{children}</Suspense>
     </Canvas>
   );
 };
