@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
+import styles from './Slider.module.scss'
 const Slidercmp = () => {
   const settings = {
     infinite: true,
@@ -33,18 +33,18 @@ const Slidercmp = () => {
 
 const CustomNextArrow = (props) => (
   <div
-    className={props.className}
-    style={{ ...props.style, display: 'block', width: '50px', height: '50px', zIndex: 2 }}
+    className={`${props.className} ${styles.arrow}`}
+    style={{ ...props.style, display: 'block', right: 35, zIndex: 2 }}
     onClick={props.onClick}
   >
-    Next
+
   </div>
 );
 
 const CustomPrevArrow = (props) => (
   <div
-    className={props.className}
-    style={{ ...props.style, display: 'block', width: '50px', height: '50px', zIndex: 2, left: 0 }}
+    className={`${props.className} ${styles.arrow}`}
+    style={{ ...props.style, display: 'block', zIndex: 2, left: 10 }}
     onClick={props.onClick}
   >
     Prev

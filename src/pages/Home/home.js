@@ -1,5 +1,5 @@
 import ProductItem from './productItem';
-import Slidercmp from './Slider';
+import Slidercmp from '../../components/GlobalCanvas/slider/Slider';
 
 const Home = ({ products }) => {
     return (
