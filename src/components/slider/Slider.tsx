@@ -46,7 +46,7 @@ const CustomNextArrow: React.FC<ArrowProps> = (props) => (
     style={{ ...props.style, display: 'block', right: 35, zIndex: 2 }}
     onClick={props.onClick}
   >
-    {/* Your arrow content goes here */}
+    Next
   </div>
 );
 
