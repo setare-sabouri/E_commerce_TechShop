@@ -1,21 +1,26 @@
+
 import Image from 'next/image';
 import React, { useContext } from 'react';
 import Layout from '../../Layout/Layout';
 import Store from '../../utils/Store';
 import { FetchOneProduct } from '../../utils/API';
+import styles from './slug.module.scss';
 
-export default function ProductScreen(props) {
+
+const ProductScreen: React.FC<{ product: any }> = (props) => {
     const { product } = props;
     const { state, dispatch } = useContext(Store);
 
+    // Check if the product is available
     if (!product) {
         return (
             <Layout title={"Product not Found"}>
-                < h1 className='flex justify-center text-3xl' > Produt Not Found</h1 >
-            </Layout >
-        )
+                <h1 style={{ textAlign: 'center', fontSize: '1.5rem' }}>Product Not Found</h1>
+            </Layout>
+        );
     }
 
+    // Handler function for adding the product to the cart
     const addToCartHandler = () => {
         const existItem = state.cart.cartItems.find((x) => x.slug === product.slug);
         const quantity = existItem ? existItem.quantity + 1 : 1;
@@ -27,60 +32,56 @@ export default function ProductScreen(props) {
         dispatch({ type: 'CART_ADD_ITEM', payload: { ...product, quantity } });
     };
 
+
     return (
         <Layout title={product.name}>
-            <div className='grid grid-rows-1 border-b p-4'>
-                <div className="grid grid-cols-4">
-                    <div className="col-span-1 flex">
-                        <div>Price : </div>
+            <div className={styles.productDetails}>
+                <div className={styles.gridContainer}>
+                    <div className={styles.price}>
+                        <div>Price :</div>
                         <div>${product.price}</div>
                     </div>
-                    <div className="col-span-2 flex ">
+                    <div className={styles.status}>
                         <div>Status :</div>
-                        <div> {product.countInStock > 0 ? 'In stock' : 'Unavailable'}</div>
+                        <div>{product.countInStock > 0 ? 'In stock' : 'Unavailable'}</div>
                     </div>
-                    <button
-                        className="col-span-1 primary-button "
-                        onClick={addToCartHandler}
-                    >
+                    <button className={styles.addToCartButton} onClick={addToCartHandler}>
                         Add to cart
                     </button>
                 </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4  p-4">
-                <div className='md:col-span-1 flex items-center'>
-                    <ul className=' flex flex-col gap-4'>
-                        <li className='text-lg'>
-                            <h1 className="text-2xl font-bold">{product.name}</h1>
-                        </li>
-                        <li className='text-lg'>Category: {product.category}</li>
-                        <li className='text-lg'>Brand: {product.brand}</li>
-                        <li className='text-lg'>
+            <div className={styles.productInfo}>
+                <div className={styles.infoLeft}>
+                    <ul>
+                        <li>{product.name}</li>
+                        <li>Category: {product.category}</li>
+                        <li>Brand: {product.brand}</li>
+                        <li>
                             {product.rating} of {product.numReviews} reviews
                         </li>
                         <li>Description: {product.description}</li>
                     </ul>
                 </div>
-
-                <div className="md:col-span-1 ">
-                    <div >
+                <div className={styles.infoRight}>
+                    <div>
                         <Image
-                            className='rounded'
                             src={product.image}
                             alt={product.name}
                             width={200}
                             height={200}
                             layout='responsive'
-                        ></Image>
+                        />
                     </div>
-
                 </div>
             </div>
         </Layout>
     );
-}
+};
 
-
+// Fetch data from the server and provide it to the component
 export async function getServerSideProps(context) {
     return FetchOneProduct(context);
 }
+
+
+export default ProductScreen;
