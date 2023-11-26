@@ -4,7 +4,8 @@
   
     .gridContainer {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
     }
   
     .price {
@@ -38,8 +39,12 @@
     .infoLeft {
       display: flex;
       align-items: center;
+      justify-content: center ;
   
       ul {
+        border: 2px solid black;
+        border-radius: 5px;
+        padding: 3rem;
         display: flex;
         flex-direction: column;
         gap: 1rem;
