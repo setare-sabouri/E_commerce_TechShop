@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import styles from './product.module.scss'; // Import the SCSS module
+import styles from './product.module.scss';
 
 interface ProductItemProps {
     product: {
