@@ -1,0 +1,36 @@
+/* product.module.scss */
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+  
+    img {
+      cursor: pointer;
+    }
+  
+    .product-details {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 1.25rem; 
+  
+      a {
+        text-decoration: none;
+      }
+  
+      h2 {
+        font-size: 1.25rem; 
+        margin-bottom: 0.5rem; 
+      }
+  
+      p {
+        margin-bottom: 0.25rem;
+      }
+  
+      .price {
+        font-weight: bold;
+      }
+    }
+  }
+  
