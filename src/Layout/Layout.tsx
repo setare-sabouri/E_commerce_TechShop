@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Navbar from "@layout/Navbar";
 import Footer from "@layout/Footer";
-import Announcement from "@layout/Announcement";
+import Announcement from "@components/Announcement.tsx/Announcement";
 
 export default function Layout({
   title,
