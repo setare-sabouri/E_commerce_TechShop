@@ -1,5 +1,5 @@
-import ProductItem from './productItem';
-import Slidercmp from './Slider';
+import ProductItem from '../../components/Product/productItem';
+import Slidercmp from '@components/slider/Slider'
 
 const Home = ({ products }) => {
     return (

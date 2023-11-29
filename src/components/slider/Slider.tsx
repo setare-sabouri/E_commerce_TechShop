@@ -2,15 +2,18 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import styles from './Slider.module.scss';
 
-const Slidercmp = () => {
+interface SliderProps { }
+
+const Slidercmp: React.FC<SliderProps> = () => {
   const settings = {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: <CustomNextArrow />,
-    prevArrow: <CustomPrevArrow />
+    prevArrow: <CustomPrevArrow />,
   };
 
   return (
@@ -31,20 +34,26 @@ const Slidercmp = () => {
   );
 };
 
-const CustomNextArrow = (props) => (
+interface ArrowProps {
+  className?: string;
+  style?: React.CSSProperties;
+  onClick?: () => void;
+}
+
+const CustomNextArrow: React.FC<ArrowProps> = (props) => (
   <div
-    className={props.className}
-    style={{ ...props.style, display: 'block', width: '50px', height: '50px', zIndex: 2 }}
+    className={`${props.className} ${styles.arrow}`}
+    style={{ ...props.style, display: 'block', right: 35, zIndex: 2 }}
     onClick={props.onClick}
   >
     Next
   </div>
 );
 
-const CustomPrevArrow = (props) => (
+const CustomPrevArrow: React.FC<ArrowProps> = (props) => (
   <div
-    className={props.className}
-    style={{ ...props.style, display: 'block', width: '50px', height: '50px', zIndex: 2, left: 0 }}
+    className={`${props.className} ${styles.arrow}`}
+    style={{ ...props.style, display: 'block', zIndex: 2, left: 10 }}
     onClick={props.onClick}
   >
     Prev
