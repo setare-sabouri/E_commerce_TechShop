@@ -99,42 +99,4 @@
       font-weight: bold;
     }
   }
-
-  .mobileMenuButton {
-    display: block;
-    margin: 0;
-    padding: 0.5rem;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-
-    @media (min-width: 768px) {
-      display: none;
-    }
-  }
-
-  .mobileNav {
-    flex-direction: column;
-    gap: 2px;
-    list-style-type: none;
-    margin: 0;
-
-    @media (min-width: 768px) {
-      display: flex;
-      position: absolute;
-      top: 70px; /* Adjust as needed based on your design */
-      right: 0;
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .mobileNavItem {
-      cursor: pointer;
-      padding: 1rem;
-      text-align: center;
-      border-bottom: 1px solid #ccc; /* Add a separator between mobile nav items */
-    }
-
-    /* Add any additional styles for mobile navigation items as needed */
-  }
 }
