@@ -4,7 +4,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styles from './Slider.module.scss';
 
-interface SliderProps { }
+interface SliderProps {}
 
 const Slidercmp: React.FC<SliderProps> = () => {
   const settings = {
@@ -19,16 +19,16 @@ const Slidercmp: React.FC<SliderProps> = () => {
   return (
     <Slider {...settings}>
       <div>
-        <img src='./images/banner/ROG-Zephyrus-banner-2.jpg' alt='Banner 1' />
+        <img src="./slider/MSI-AMG-Stealth16-banner2.jpg" alt="Banner 1" />
       </div>
       <div>
-        <img src='./images/banner/wide-range-of-laptops.jpg' alt='Banner 2' />
+        <img src="./slider/wide-range-of-laptops.jpg" alt="Banner 2" />
       </div>
       <div>
-        <img src='./images/banner/MSI-AMG-Stealth16-banner2.jpg' alt='Banner 3' />
+        <img src="./slider/ROG-Zephyrus-banner-2.jpg" alt="Banner 3" />
       </div>
       <div>
-        <img src='./images/banner/g5-gaming-banner2.jpg' alt='Banner 4' />
+        <img src="./slider/g5-gaming-banner2.jpg" alt="Banner 4" />
       </div>
     </Slider>
   );
