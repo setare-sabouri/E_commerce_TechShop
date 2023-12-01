@@ -38,6 +38,7 @@ const Navbar = () => {
             </div>
 
             <div className={styles.userContainer}>
+                <Image src={"/Icons/user.svg"} width={20} height={20} />
                 {status === 'loading' ? (
                     'Loading'
                 ) : session?.user ? (
@@ -54,37 +55,31 @@ const Navbar = () => {
                                     </DropdownLink>
                                 </Menu.Item>
                                 <Menu.Item>
-                                    <DropdownLink
-                                        className={styles.dropdownLink}
-                                        href="/Card/cart"
-                                    >
-                                        Order History
-                                    </DropdownLink>
-                                </Menu.Item>
-                                <Menu.Item>
-                                    <Link
+                                    <a
                                         className={styles.dropdownLink}
                                         onClick={logoutClickHandler}
                                         href="#"
                                     >
                                         Logout
-                                    </Link>
+                                    </a>
                                 </Menu.Item>
                             </Menu.Items>
                         </Menu>
                     </div>
                 ) : (
-                    <Link href="/Login/login" className={styles.loginLink}>
+                    <Link href="/Login/login" >
                         Login
                     </Link>
                 )}
 
-                <div className="cart">
+                <div className={styles.cartContainer}>
+                    <Image src={"/Icons/shopping-cart.svg"} width={20} height={20} />
+
                     <Link href="/Card/cart" >
                         Cart
-                    </Link>{' '}
+                    </Link>
                     {cartItemsCount > 0 && (
-                        <span className="ml-1 rounded-full bg-red-600 px-2 py-1 text-xs font-bold text-white">
+                        <span className={styles.cartCount}>
                             {cartItemsCount}
                         </span>
                     )}

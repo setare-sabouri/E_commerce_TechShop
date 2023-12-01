@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 0.5rem;
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   color: white;
 
   .logo {
@@ -67,23 +67,36 @@
 
     .userMenu {
       position: relative;
-.menuButton{
-  color: white;
-}
+
+      .menuButton {
+        color: white;
+        display: flex;
+        align-items: flex-end;
+      }
+
       .menuItems {
         padding: 0.8rem;
         border-radius: 0.2rem;
         color: black;
         background-color: #eda415;
         position: absolute;
-        z-index: 1;
+        z-index: 2;
         display: flex;
         flex-direction: column;
       }
     }
+  }
+  .cartContainer {
+    display: flex;
+    gap: 0.5rem;
 
-    .loginLink {
-      padding: 2px;
+    .cartCount {
+      border-radius: 50%;
+      background-color: #eda415;
+      font-size: 12px;
+      padding: 0.2rem 0.5rem;
+      color: black;
+      font-weight: bold;
     }
   }
 
