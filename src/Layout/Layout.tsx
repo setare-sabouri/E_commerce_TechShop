@@ -1,7 +1,7 @@
-import Head from "next/head";
-import Navbar from "@components/Navbar/Navbar";
-import Footer from "@layout/Footer";
-import Announcement from "@components/Announcement.tsx/Announcement";
+import Head from 'next/head';
+import Announcement from '@components/Announcement.tsx/Announcement';
+import Navbar from '@components/Navbar/Navbar';
+import Footer from '@layout/Footer';
 
 export default function Layout({
   title,
@@ -13,7 +13,7 @@ export default function Layout({
   return (
     <>
       <Head>
-        <title>{title ? title + " - TechShop" : "TechShop"}</title>
+        <title>{title ? title + ' - TechShop' : 'TechShop'}</title>
         <meta name="description" content="Ecommerce Website" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="Logo.png" />
