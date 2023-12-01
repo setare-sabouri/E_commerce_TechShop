@@ -1,0 +1,127 @@
+/* Navbar.module.scss */
+
+.navbar {
+  background-color: #003f62;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  color: white;
+
+  .logo {
+    flex-grow: 2;
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    align-items: center;
+    .logo {
+      display: block;
+    }
+  }
+
+  .searchBar {
+    flex-grow: 3;
+    display: flex;
+    gap: 0.5rem;
+
+    input {
+      width: 40%;
+      padding: 0.5rem;
+      border-radius: 1rem;
+    }
+
+    button {
+      width: 30%;
+      background-color: #eda415;
+      padding: 0.5rem;
+      border-radius: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      input {
+        width: 100%;
+        padding: 0.5rem;
+      }
+
+      button {
+        padding: 0.5rem;
+        width: 50%;
+      }
+    }
+  }
+
+  .userContainer {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.5rem;
+    justify-content: flex-end;
+
+    @media (min-width: 768px) {
+    }
+
+    .userMenu {
+      position: relative;
+.menuButton{
+  color: white;
+}
+      .menuItems {
+        padding: 0.8rem;
+        border-radius: 0.2rem;
+        color: black;
+        background-color: #eda415;
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .loginLink {
+      padding: 2px;
+    }
+  }
+
+  .mobileMenuButton {
+    display: block;
+    margin: 0;
+    padding: 0.5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  .mobileNav {
+    flex-direction: column;
+    gap: 2px;
+    list-style-type: none;
+    margin: 0;
+
+    @media (min-width: 768px) {
+      display: flex;
+      position: absolute;
+      top: 70px; /* Adjust as needed based on your design */
+      right: 0;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .mobileNavItem {
+      cursor: pointer;
+      padding: 1rem;
+      text-align: center;
+      border-bottom: 1px solid #ccc; /* Add a separator between mobile nav items */
+    }
+
+    /* Add any additional styles for mobile navigation items as needed */
+  }
+}

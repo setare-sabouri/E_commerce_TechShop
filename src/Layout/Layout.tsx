@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Navbar from "@layout/Navbar";
+import Navbar from "@components/Navbar/Navbar";
 import Footer from "@layout/Footer";
 import Announcement from "@components/Announcement.tsx/Announcement";
 
