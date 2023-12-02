@@ -3,36 +3,36 @@ import React from 'react';
 import styles from './product.module.scss';
 
 interface ProductItemProps {
-    product: {
-        slug: string;
-        image: string;
-        name: string;
-        brand: string;
-        price: number;
-    };
+  product: {
+    slug: string;
+    image: string;
+    name: string;
+    brand: string;
+    price: number;
+  };
 }
 
 const ProductItem: React.FC<ProductItemProps> = ({ product }) => {
-    return (
-        <article className={styles['product-item']}>
-            <Link href={`/Product/${product.slug}`} >
-                <img
-                    src={product.image}
-                    alt={product.name}
-                    className={styles['cursor-pointer']}
-                />
-            </Link>
-            <div className={styles['product-details']}>
-                <Link href={`/Product/${product.slug}`}>
-                    <a>
-                        <h2 className={styles['text-lg']}>{product.name}</h2>
-                    </a>
-                </Link>
-                <p className={styles['mb-2']}>{product.brand}</p>
-                <p className={styles['font-bold', 'price']}>${product.price}</p>
-            </div>
-        </article>
-    );
+  return (
+    <article className={styles.productItem}>
+      <Link href={`/Product/${product.slug}`}>
+        <img
+          src={product.image}
+          alt={product.name}
+          className={styles.productImage}
+        />
+      </Link>
+      <div className={styles.productDetails}>
+        <Link href={`/Product/${product.slug}`}>
+          <a>
+            <h2 className={styles.productName}>{product.name}</h2>{' '}
+          </a>
+        </Link>
+        <p className={styles.productBrand}>{product.brand}</p>{' '}
+        <p className={`${styles.price} ${styles.fontBold}`}>${product.price}</p>{' '}
+      </div>
+    </article>
+  );
 };
 
 export default ProductItem;
