@@ -121,7 +121,7 @@ const CartScreen: FC = () => {
                 <li>
                   <button
                     onClick={() =>
-                      router.push('/Login/login?redirect=/Card/shipping')
+                      router.push('/Login/login?redirect=/Cart/shipping')
                     }
                     className={styles.checkoutButton}
                   >

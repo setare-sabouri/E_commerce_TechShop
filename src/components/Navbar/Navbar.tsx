@@ -73,7 +73,7 @@ const Navbar = () => {
         <div className={styles.cartContainer}>
           <Image src={'/Icons/shopping-cart.svg'} width={20} height={20} />
 
-          <Link href="/Card/cart">Cart</Link>
+          <Link href="/Cart/cart">Cart</Link>
           {cartItemsCount > 0 && (
             <span className={styles.cartCount}>{cartItemsCount}</span>
           )}
