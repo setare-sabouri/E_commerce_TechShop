@@ -20,7 +20,8 @@
     "jsx": "preserve",
      "paths": {
        "@*":["./src/*"],
-       "@styles/*":["./styles/*"]
+       "@styles/*":["./styles/*"],
+       "@customTypes/*": ["./types/*"]
      }
   },
   "include": [
