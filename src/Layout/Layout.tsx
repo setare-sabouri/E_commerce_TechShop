@@ -23,7 +23,9 @@ export default function Layout({
           <Announcement />
           <Navbar />
         </header>
-        <main className="container-fluid">{children}</main>
+        <main className="container-fluid min-h-screen p-4 text-center ">
+          {children}
+        </main>
         <Footer />
       </div>
     </>
