@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Navbar from "@layout/Navbar";
 import Footer from "@layout/Footer";
-import Announcement from "@Layout/Announcement";
 import { ReactNode } from "react";
 
 interface LayoutProps {
@@ -21,7 +20,6 @@ const Layout: React.FC<LayoutProps> = ({ title, children }) => {
       </Head>
       <div className="flex min-h-screen flex-col justify-between ">
         <header>
-          <Announcement />
           <Navbar />
         </header>
         <main className="container-fluid">{children}</main>
