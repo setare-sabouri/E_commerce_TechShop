@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-const articles = [
+
+interface Article {
+  title: string;
+  content: string[];
+}
+
+const articles: Article[] = [
   {
     title: 'Information',
     content: [
@@ -12,15 +18,15 @@ const articles = [
       'Orders and Returns',
       'Contact Us',
       'Advanced Search',
-      'NewsLetter Subscription',
+      'Newsletter Subscription',
     ],
   },
   {
     title: 'PC Parts',
     content: [
-      'CPUS',
+      'CPUs',
       'Add On Cards',
-      'Hard Drives(Internal)',
+      'Hard Drives (Internal)',
       'Graphic Cards',
       'Keyboards / Mice',
       'Cases / Power Supplies / Cooling',
@@ -55,21 +61,21 @@ const articles = [
   {
     title: 'Address',
     content: [
-      'Address:1234 Street Address City Address,1234',
-      'Phones:(00) 12345678',
-      'We are Open : Monday-Thursday: 9:00 AM - 5:30 PM',
-      'Friday:9:00 AM - 6:00 PM ',
-      'Saturday: 11:00 AM - 5:00 PM',
-      'E-mail: shop@email.com',
+      'Address: 1234 Street Address, City Address, 1234',
+      'Phones: (00) 12345678',
+      'Open: Mon-Thu: 9:00 AM - 5:30 PM',
+      'Fri: 9:00 AM - 6:00 PM',
+      'Sat: 11:00 AM - 5:00 PM',
+      'Email: shop@email.com',
     ],
   },
 ];
 
-const Footer = () => {
-  const [activeAccordion, setActiveAccordion] = useState(null);
-  const [isWideScreen, setIsWideScreen] = useState(false);
+const Footer: React.FC = () => {
+  const [activeAccordion, setActiveAccordion] = useState<number | null>(null);
+  const [isWideScreen, setIsWideScreen] = useState<boolean>(false);
 
-  const toggleAccordion = (index) => {
+  const toggleAccordion = (index: number) => {
     setActiveAccordion(activeAccordion === index ? null : index);
   };
 
@@ -79,7 +85,6 @@ const Footer = () => {
     };
     handleResize();
     window.addEventListener('resize', handleResize);
-
     return () => {
       window.removeEventListener('resize', handleResize);
     };
@@ -89,16 +94,13 @@ const Footer = () => {
     <footer className="bg-black text-white flex flex-col gap-2 px-5 py-4 md:px-20">
       <section className="p-4 grid grid-cols-1 gap-1 md:grid-cols-2">
         <div className="flex flex-col">
-          <h2 className="text-xl font-bold mb-2">
-            Subscribe to Our Newsletter
-          </h2>
+          <h2 className="text-xl font-bold mb-2">Subscribe to Our Newsletter</h2>
           <p>Be the first to hear about the latest offers.</p>
         </div>
-
         <div className="flex gap-2">
           <input
             type="email"
-            className="border border-gray-400 rounded px-2 py-1 flex-grow-0 md:flex-grow "
+            className="border border-gray-400 rounded px-2 py-1 flex-grow-0 md:flex-grow"
             placeholder="Enter your email"
           />
           <button className="bg-blue-500 hover:bg-blue-600 text-white rounded px-4 py-1">
@@ -108,11 +110,10 @@ const Footer = () => {
       </section>
 
       <section className="p-4">
-        <div className="grid grid-cols-1  md:grid-cols-5 gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-2">
           {articles.map((article, index) => (
             <article key={index} className="mb-4 md:mb-0">
-
-              {isWideScreen && (
+              {isWideScreen ? (
                 <div>
                   <h3 className="text-lg font-bold mb-2 cursor-pointer">
                     {article.title}
@@ -123,8 +124,7 @@ const Footer = () => {
                     ))}
                   </ul>
                 </div>
-              )}
-              {!isWideScreen && (
+              ) : (
                 <div>
                   <h3
                     className="text-lg font-bold mb-2 cursor-pointer"
