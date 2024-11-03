@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Navbar from "@Layout/Navbar";
-import Foot
+
 import Footer from "@Layout/Footer";
 import { ReactNode } from "react";
 
