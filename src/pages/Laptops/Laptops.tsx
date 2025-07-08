@@ -1,15 +1,11 @@
 import React from "react";
-import Layout from "@layout/Layout";
+import Layout from "@Layout/Layout";
 import styles from "./Laptops.module.scss";
 import { OrbitControls } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import GlobalCanvas from "@components/GlobalCanvas/GlobalCanvas";
 
 const Laptops = () => {
-  // useFrame(() => {
-  //   console.log("frame");
-  // });
-
   return (
     <Layout title="laptops Page">
       <div className={styles.laptops}>
